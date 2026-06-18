@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movimientos",
+  "info": {
+    "singularName": "movimiento",
+    "pluralName": "movimientos",
+    "displayName": "Movimiento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tipo": {
+      "type": "string"
+    },
+    "Cantidad": {
+      "type": "integer"
+    },
+    "Fecha": {
+      "type": "date"
+    },
+    "Motivo": {
+      "type": "string"
+    },
+    "producto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::producto.producto",
+      "inversedBy": "movimientos"
+    }
+  }
+}
